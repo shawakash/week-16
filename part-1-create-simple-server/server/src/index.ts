@@ -3,7 +3,7 @@ import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
 import * as path from "path";
 
-const fs = require('fs');
+import fs from 'fs';
 const schemaString = fs.readFileSync(path.join(__dirname, './schema.gql'), 'utf8');
 const schema = buildSchema(schemaString);
 
